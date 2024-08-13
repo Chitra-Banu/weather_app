@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Based Activity Decision Maker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .card {
+            margin-top: 20px;
+        }
+        .radio-group {
+            margin: 10px 0;
+        }
+        #recommendation {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center">Weather-Based Activity Decision Maker</h1>
+                <div class="mb-3">
+                    <label for="city" class="form-label">Enter City Name:</label>
+                    <input type="text" id="city" class="form-control" placeholder="e.g., Chennai">
+                </div>
+                <div class="d-grid gap-2">
+                    <button id="fetchWeatherBtn" class="btn btn-primary">Fetch Weather</button>
+                </div>
+                <div id="weatherInfo" class="mt-4"></div>
+
+                <div id="activitySelection" class="mt-4" style="display:none;">
+                    <h3 class="text-center">Select an Activity:</h3>
+                    <div class="radio-group">
+                        <label><input type="radio" name="activity" value="games"> Games</label><br>
+                        <label><input type="radio" name="activity" value="events"> Events</label><br>
+                        <label><input type="radio" name="activity" value="tourist-spots"> Tourist Spots</label><br>
+                        <label><input type="radio" name="activity" value="picnic"> Picnic</label><br>
+                        <label><input type="radio" name="activity" value="photography"> Photography</label><br>
+                        <label><input type="radio" name="activity" value="cycling"> Cycling</label><br>
+                        <label><input type="radio" name="activity" value="jogging"> Jogging</label><br>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button id="getRecommendationBtn" class="btn btn-success">Get Recommendation</button>
+                    </div>
+                </div>
+                <div id="recommendation" class="alert alert-info mt-4" role="alert"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
